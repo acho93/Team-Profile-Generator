@@ -98,6 +98,7 @@
     "imurmurhash": "^0.1.4",
     "inflight": "^1.0.6",
     "inherits": "^2.0.4",
+    "inquirer": "^8.2.0",
     "is-core-module": "^2.8.0",
     "is-fullwidth-code-point": "^3.0.0",
     "is-generator-fn": "^2.1.0",
