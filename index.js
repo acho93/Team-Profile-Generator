@@ -163,8 +163,47 @@ Add Employees to the Team
             default: false
         },
     ])
-    
+    .then(employeeData => {
+        let { role, name, id, email, github, school, confirmEmployee } = employeeData; 
+        let employee; 
+
+        if (role === "Engineer") {
+            employee = new Engineer (name, id, email, github);
+
+            console.log(employee);
+
+        } else if (role === "Intern") {
+            employee = new Intern (name, id, email, school);
+
+            console.log(employee);
+        }
+        
+        teamArray.push(employee); 
+
+        if (confirmEmployee) {
+            return addEmployee(teamArray); 
+        } else {
+            return teamArray;
+        }
+    })
 };
 
 addManager()
-    .then
+    .then(addEmployee)
+    .then(teamArray => {
+        return generatePage(teamArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+        return copyFile();
+    })
+    .then(copyFileResponse => {
+        console.log(copyFileResponse);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+    
