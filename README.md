@@ -9,7 +9,7 @@
 [Questions](#question)
 
 ## Description
-Using inquirer from node.js, this application compiles data from user input to create a webpage that displays information, such as name, ID, email, etc., about the user's team, including roles such as "manager", "engineer", and "intern". Here is a video of how it functions: 
+Using inquirer from node.js, this application compiles data from user input to create a webpage that displays information, such as name, ID, email, etc., about the user's team, including roles such as "manager", "engineer", and "intern". Here is a video of how it functions: https://youtu.be/bvPOabviTw4
 
 ## Installation
 You will need to run npm install to use jest (for testing) and inquirer (for prompts).
